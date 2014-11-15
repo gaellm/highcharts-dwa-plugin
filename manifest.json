@@ -1,0 +1,39 @@
+{
+	"name": "Dynamnic Weighted Average plugin",
+	"version": "1.0",
+	"title": "Dynamnic Weighted Average",
+	"author": {
+		"name": "Gaël Le Moëllic",
+		"url": "https://github.com/gaellm/highcharts-dwa-plugin.git"
+	},
+	"licenses": [
+		{
+			"type": "",
+			"url": ""
+		}
+	],
+	"dependencies": {
+		"highcharts": "4.0.4",
+		"jquery":"1.11.0",
+	},
+	"description": "Add a weighted average graph on the chart, dynamically calculated following displayed series.",
+	"keywords": [
+     "average",
+     "weight"
+  ],
+	"homepage": "https://github.com/gaellm/highcharts-dwa-plugin.git",	
+	"docs": "https://github.com/gaellm/highcharts-dwa-plugin.git",	
+	"bugs": "https://github.com/gaellm/highcharts-dwa-plugin.git",
+	"download": "https://github.com/gaellm/highcharts-dwa-plugin.git",
+	"demo": [
+		"",
+		""
+	],
+	"maintainers": [
+		{
+			"name": "Gaël Le Moëllic",
+			"email": "gael.lm@gmail.com",
+			"url": "https://github.com/gaellm"
+		}
+	]	
+}
