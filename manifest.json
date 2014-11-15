@@ -8,8 +8,8 @@
 	},
 	"licenses": [
 		{
-			"type": "",
-			"url": ""
+			"type": "Creative Commons Attribution (CC)",
+			"url": "https://raw.githubusercontent.com/gaellm/highcharts-dwa-plugin/master/license.txt"
 		}
 	],
 	"dependencies": {
