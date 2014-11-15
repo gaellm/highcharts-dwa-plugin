@@ -61,4 +61,6 @@ Tested with:
 * Jquery 1.11.0
 * Highcharts 4.0.4
 
+###Demo
+http://jsfiddle.net/gaellm/pw4fwdjm/
 
