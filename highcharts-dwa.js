@@ -4,7 +4,7 @@
  * Add a weighted average graph on the chart, dynamically calculated following displayed series.
  *
  * @author      Gaël Le Moëllic <gael.lm@gmail.com>
- * @version     Release: 1.0
+ * @version     Release: 1.1
  * @highcharts  Version 4.0.4
  */
 ;
