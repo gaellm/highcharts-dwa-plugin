@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynamic Weighted Average Plugin</title>
+       
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/gaellm/highcharts-dwa-plugin/master/highcharts-dwa.js"></script>
+    </head>
+<body>
+       
+
+<script type="text/javascript">
+$(function () {
+    
+                
+        $('#chart').highcharts({
+            chart: {
+                type: 'spline',
+                zoomType: 'x',
+                backgroundColor:'rgb(255, 255, 255)'
+            },
+            
+            plotOptions: {
+            series: {
+                lineWidth: 1,
+                turboThreshold: 100000,
+                marker: {
+                    enabled: true,                     
+					radius: 3
+                },
+                shadow:true
+            }
+			},
+
+            wgaOptions: {
+                'visibleAtFirst' : false
+            },
+                    
+            title: {
+                text: 'Red cars sales rate'
+            },
+            subtitle: {
+                text: 'sales per days per stores'
+            },
+            xAxis: {
+                
+            type: 'datetime',
+                      dateTimeLabelFormats: {
+                            millisecond: '%H:%M:%S.%L',
+                            second: '%H:%M:%S',
+                            minute: '%H:%M',
+                            hour: '%H:%M',
+                            day: '%e. %b',
+                            week: '%e. %b',
+                            month: '%b %y',
+                            year: '%Y'
+                      },minTickInterval: 24 * 3600 * 1000            },
+            yAxis: {
+                title: {
+                    text: 'red car(s)'
+                },
+                labels: {
+                    format: '{value} %'
+                },
+                min: 0
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b style="color:'+this.series.color+';">' + this.series.name + '</b><br/>' +
+                            Highcharts.dateFormat('%e. %b', this.x) + ' : ' + this.y + ' %<br/>'+'<span style="color:#999999; font-size:9;">' + this.point.comment +'</span>';
+                }
+            },
+            series: [{
+    name : 'Renault',
+    data : [{
+            x : Date.UTC(2014, 8, 15, 00, 00, 00),
+            y : .26,
+            comment : '10603 red car(s) sold on   4070950',
+            foo : 'fooo',
+            s:10603,
+            n:4070950
+        }/*, {
+            x : Date.UTC(2014, 8, 16, 00, 00, 00),
+            y : .234,
+            comment : '9519 red car(s) sold on   4074403',
+            s:9519,
+            n:4074403
+        }*/, {
+            x : Date.UTC(2014, 8, 17, 00, 00, 00),
+            y : .223,
+            comment : '9092 red car(s) sold on   4075437',
+            s:9092,
+            n:4075437
+        }, {
+            x : Date.UTC(2014, 8, 18, 00, 00, 00),
+            y : .227,
+            comment : '9251 red car(s) sold on   4079020',
+            s:9251,
+            n:4079020
+        }, {
+            x : Date.UTC(2014, 8, 19, 00, 00, 00),
+            y : .207,
+            comment : '8448 red car(s) sold on   4076399',
+            s:8448,
+            n:4076399
+        }, {
+            x : Date.UTC(2014, 8, 20, 00, 00, 00),
+            y : .17,
+            comment : '6929 red car(s) sold on   4081190',
+            s:6929,
+            n:4081190
+        }
+    ]
+},  {
+    name : 'Ford',
+    data : [{
+            x : Date.UTC(2014, 8, 15, 00, 00, 00),
+            y : .246,
+            comment : '2307 red car(s) sold on   938280',
+            s:2307,
+            n:938280
+        }, {
+            x : Date.UTC(2014, 8, 16, 00, 00, 00),
+            y : .218,
+            comment : '2050 red car(s) sold on   939884',
+            s:2050,
+            n:939884
+        }, {
+            x : Date.UTC(2014, 8, 17, 00, 00, 00),
+            y : .213,
+            comment : '2005 red car(s) sold on   940593',
+            s:2050,
+            n:940593
+        }, {
+            x : Date.UTC(2014, 8, 18, 00, 00, 00),
+            y : .005,
+            comment : '50 red car(s) sold on   941995',
+            s:50,
+            n:941995
+        }, {
+            x : Date.UTC(2014, 8, 19, 00, 00, 00),
+            y : .204,
+            comment : '1920 red car(s) sold on   942004',
+            s:1920,
+            n:942004
+        }, {
+            x : Date.UTC(2014, 8, 20, 00, 00, 00),
+            y : .156,
+            comment : '1475 red car(s) sold on   943446',
+            s:1475,
+            n:943446
+        }
+    ]
+}] ,
+            noData: {
+                style: {                    
+                    color: 'rgb(42, 100, 150)'        
+                }
+            },
+            
+            legend:{
+                maxHeight: 105,
+                layout: 'vertical'
+            }, 
+        });        
+    });
+
+</script>
+<div id="chart" style="min-width: 310px; max-width: 80%; height: 500px; margin: 0 auto; color: transparent;"></div>
+<button id='adwa' onclick="$('#chart').highcharts().DynamnicWeightedAverage();">Add Dynamic Weighted Average</button>
+</body>
+</html>
