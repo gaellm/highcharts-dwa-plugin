@@ -1,7 +1,7 @@
 highcharts-dwa-plugin
 =====================
 
-Dynamnic Weighted Average plugin. Add a weighted average graph on the chart, dynamically calculated following displayed series.
+Dynamic Weighted Average plugin. Add a weighted average graph on the chart, dynamically calculated following displayed series.
 
 ###Demo
 http://jsfiddle.net/gaellm/pw4fwdjm/
@@ -36,9 +36,9 @@ series: [{
 ...
 ```
 
-To call the plugin you must use the chart's DynamnicWeightedAverage() function, for example:
+To call the plugin you must use the chart's DynamicWeightedAverage() function, for example:
 ```
-$('#chart').highcharts().DynamnicWeightedAverage();
+$('#chart').highcharts().DynamicWeightedAverage();
 ```
 
 

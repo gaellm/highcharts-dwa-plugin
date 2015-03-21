@@ -1,10 +1,10 @@
 /**
- * Dynamnic Weighted Average plugin
+ * Dynamic Weighted Average plugin
  *
  * Add a weighted average graph on the chart, dynamically calculated following displayed series.
  *
  * @author      Gaël Le Moëllic <gael.lm@gmail.com>
- * @version     Release: 1.1
+ * @version     Release: 1.2.1
  * @highcharts  Version 4.0.4
  */
 ;
@@ -13,7 +13,7 @@
 (function (H) {
     
 	//Add function to Chart prototype
-	H.wrap(H.Chart.prototype, 'DynamnicWeightedAverage', function () {
+	H.wrap(H.Chart.prototype, 'DynamicWeightedAverage', function () {
 
 		var chartSeries = this.series,
 			existingDwaSerie = this.get('dwa'),
@@ -130,7 +130,7 @@
 
       	// Run wga if visible
       	if(dwaSerie.visible){
-  			chart.DynamnicWeightedAverage();
+  			chart.DynamicWeightedAverage();
   		}	
 	});
 

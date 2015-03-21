@@ -1,7 +1,7 @@
 {
-	"name": "Dynamnic Weighted Average plugin",
-	"version": "1.2",
-	"title": "Dynamnic Weighted Average",
+	"name": "Dynamic Weighted Average plugin",
+	"version": "1.2.1",
+	"title": "Dynamic Weighted Average",
 	"author": {
 		"name": "Gaël Le Moëllic",
 		"url": "https://github.com/gaellm/highcharts-dwa-plugin.git"
