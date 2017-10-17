@@ -3,10 +3,10 @@ highcharts-dwa-plugin
 
 Dynamic Weighted Average plugin. Add a weighted average graph on the chart, dynamically calculated following displayed series.
 
-###Demo
+### Demo
 http://jsfiddle.net/gaellm/pw4fwdjm/
 
-###How it works
+### How it works
 To use the plugin you must call the plugin js file after the highcharts library. Then the only thing needed is the points' values and weights number on each series' datas. The plugin will sum values and weights to calculate the average.
 
 ```
@@ -42,7 +42,7 @@ $('#chart').highcharts().DynamicWeightedAverage();
 ```
 
 
-###Options
+### Options
 Options can be set on chart object by adding the key 'wgaOptions'.
 * `name`
 Weighted average serie's name, 'Dynamic Weighted Average' by default.
@@ -59,7 +59,7 @@ Average factor, to display percent it has to be set to 100 for example 1000 for 
 * `commentLabel`
 Comment to display on average's serie tooltip.
 
-###Dependencies
+### Dependencies
 Tested with:
 * Jquery 1.11.0
 * Highcharts 4.0.4
